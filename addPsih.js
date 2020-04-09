@@ -12,5 +12,3 @@ function pow2() {
   checkbox.checked ? pass.type = "text" : pass.type = "password"
 
 }
-
-
