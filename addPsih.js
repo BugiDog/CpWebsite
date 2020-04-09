@@ -1,5 +1,5 @@
 function pow1() {
-  let str = 'https://bugidog-dbtest.glitch.me/addpsih?name=' + document.getElementById('name').value + '&surname=' + document.getElementById('surname').value + '&password=' + document.getElementById('password').value;
+  let str = 'https://difficult-aquatic-culotte.glitch.me/addpsih?name=' + document.getElementById('name').value + '&surname=' + document.getElementById('surname').value + '&password=' + document.getElementById('password').value;
   var xhr = new XMLHttpRequest();
   xhr.open('GET', str, true);
   xhr.send();
