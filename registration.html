@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="psih_wrapper">
+      <div class="pacient_block">
+        ???Кого вы??? Пациент:<input name="hoo" type="radio" id="paz" checked/> Психолог:<input name="hoo" type="radio" id="psih" />
+      </div>
+
+      <div class="pacient_block">
+        Придумайте логин: <input type="text" id="login" />
+      </div>
+      <div class="pacient_block">
+        Введите имя: <input type="text" id="name" />
+      </div>
+      <div class="pacient_block">
+        Введите фамилию:<input type="text" id="surname" />
+      </div>
+      <div class="pacient_block">
+        Придумайте пароль: <input type="password" id="password1" />
+      </div>
+      <div class="pacient_block">
+        Повторите пароль: <input type="password" id="password2" />
+      </div>
+      <div class="pacient_block">
+        Показать пароли:<input
+          type="checkbox"
+          onclick="pass_check_viz()"
+          id="pass_check_viz"
+        />
+      </div>
+
+      <button class="button" onclick="add()">Добавить</button>
+    </div>
+    <script src="registration.js"></script>
+  </body>
+</html>

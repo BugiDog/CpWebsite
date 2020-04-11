@@ -9,9 +9,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('https://www.meme-arsenal.com/memes/1978aa04ef774ef980c3fec74bf1f98e.jpg');
+    /* background-image: url('https://www.meme-arsenal.com/memes/1978aa04ef774ef980c3fec74bf1f98e.jpg');
     background-repeat: no-repeat;
-    background-position: 50% 100%;      
+    background-position: 50% 100%;       */
 }
 .pacient_wrapper {
     width: 100%;
@@ -20,9 +20,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('https://i.pinimg.com/236x/a8/c0/2b/a8c02bc2b9872ff8ba6cb7b36d553e59.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 90%;  
+    /* background-image: url('https://www.meme-arsenal.com/memes/1978aa04ef774ef980c3fec74bf1f98e.jpg'); */
+    /* background-image: url('https://i.pinimg.com/236x/a8/c0/2b/a8c02bc2b9872ff8ba6cb7b36d553e59.jpg'); */
+    /* background-repeat: no-repeat;
+    background-position: 50% 90%;  */
 }
 
 .psih_wrapper {
@@ -32,10 +33,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('https://sun9-66.userapi.com/c205616/v205616205/199f8/gL7_WzgBgmY.jpg?ava=1');
+    /* background-image: url('https://sun9-66.userapi.com/c205616/v205616205/199f8/gL7_WzgBgmY.jpg?ava=1');
     background-repeat: no-repeat;
     background-position: 50% 90%;  
-    background-size: 25% 25%;
+    background-size: 25% 25%; */
 }
 
 .pacient_block {

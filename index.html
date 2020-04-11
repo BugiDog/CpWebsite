@@ -7,10 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="home_wrapper">
-      <button class="button home_pacient" onclick="pow1()">Добавить пациента</button>
-      <button class="button home_psyh" onclick="pow2()">Добавить психолога</button>
+    <div class="pacient_wrapper">
+      <div class="pacient_block">
+        Введите логин: <input type="text" id="login" />
+      </div>
+      <div class="pacient_block">
+        Введите пароль:<input type="password" id="password" />
+      </div>
+      <div class="pacient_block">
+        Показать
+        пароль:<input type="checkbox" onclick="pass_check_viz()" id="pass_check_viz" />
+      </div>
+      <button class="button home_pacient" onclick="login()">Войти</button>
+      <button class="button home_psyh" onclick="registration()">Регистрация</button>
     </div>
-    <script src="home.js"></script>
+   
+
+
+    
+    <script src="index.js"></script>
   </body>
 </html>
