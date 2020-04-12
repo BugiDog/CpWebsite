@@ -13,3 +13,6 @@ function pass_check_viz() {
   checkbox.checked ? pass.type = "text" : pass.type = "password"
 
 }
+function pow1(){
+  location.href = 'addUser.html'
+}

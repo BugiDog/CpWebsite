@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -7,8 +7,12 @@
   </head>
   <body>
     <div class="pacient_wrapper">
+      <div id='123'></div>
       <div class="pacient_block">
-        Введите имя: <input type="text" id="name" />
+        Введите логин: <input type="text" id="login" onchange=checkLogin() />
+      </div>
+      <div class="pacient_block">
+        <output name="result">0</output>
       </div>
       <div class="pacient_block">
         Введите фамилию:<input type="text" id="surname" />
@@ -17,4 +21,4 @@
     </div>
     <script src="addUser.js"></script>
   </body>
-</html> -->
+</html>
