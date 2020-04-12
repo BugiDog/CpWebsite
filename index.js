@@ -1,4 +1,29 @@
 function login() {
+  let pass = document.getElementById('password').value
+  let log = document.getElementById('login').value
+ //let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/login?login=' + log+ '&password=' + pass// serv
+  let str = 'http://localhost:3000/get/login?login=' + log + '&password=' + pass//lockalhost
+  fetch(str, {
+    method: 'GET',
+  })
+    .then(response => {
+      response.text().then(data => {
+        console.log(data)
+        if (data == 'nope') {
+          document.getElementById('checkLog').innerHTML = "Пользователь не найден"
+        } else {
+          if (data == 'passErr'){
+            document.getElementById('checkLog').innerHTML = "Неверный пароль"
+          } else {
+            if (data == 'ok'){
+              window.open('account.html?&'+log,"_self"); 
+            }
+          }
+          
+        }
+      })
+    })
+
   
 }
 

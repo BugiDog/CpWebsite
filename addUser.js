@@ -23,8 +23,3 @@ function pow1() {
 
 }
 
-function checkLogin(){
-  let log = document.getElementById('login').value
-  console.log(log)
-
-}

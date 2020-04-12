@@ -24,8 +24,8 @@
 
 function checkLogin() {
   let log = document.getElementById('login').value
-  let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/checkLogin?login=' + log// serv
-  //let str = 'http://localhost:3000/get/checkLogin?login=' + log  //lockalhost
+  //let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/checkLogin?login=' + log// serv
+  let str = 'http://localhost:3000/get/checkLogin?login=' + log  //lockalhost
   fetch(str, {
     method: 'GET',
   })
@@ -67,11 +67,11 @@ function add() {
     let name = document.getElementById('name').value
     let surname = document.getElementById('surname').value
     let hooPsih = document.getElementById('psih')
-    let hoo = "Pazient"
-    if (hooPsih.checked) hoo = "Psihiator"
-    let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/checkLogin?login=' + log// serv
+    let hoo = "Пациент"
+    if (hooPsih.checked) hoo = "Психиатор"
+   // let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/checkLogin?login=' + log// serv
     
-    //let strCheckLog = 'http://localhost:3000/get/checkLogin?login=' + log //lockalhost
+    let strCheckLog = 'http://localhost:3000/get/checkLogin?login=' + log //lockalhost
     fetch(strCheckLog, {
       method: 'GET',
     })
@@ -79,8 +79,8 @@ function add() {
         response.text().then(data => {
           console.log(data)
           if (data == 'ok') {
-            let str = 'https://difficult-aquatic-culotte.glitch.me/add/user?type=' +hoo+  '&login=' + log + '&name=' + name + '&surname=' + surname + '&password=' + pass1 //serv
-            //let str = 'http://localhost:3000/add/user?type=' +hoo+  '&login=' + log + '&name=' + name + '&surname=' + surname + '&password=' + pass1  //lockalhost
+            //let str = 'https://difficult-aquatic-culotte.glitch.me/add/user?type=' +hoo+  '&login=' + log + '&name=' + name + '&surname=' + surname + '&password=' + pass1 //serv
+            let str = 'http://localhost:3000/add/user?type=' +hoo+  '&login=' + log + '&name=' + name + '&surname=' + surname + '&password=' + pass1  //lockalhost
             fetch(str,{
               method: 'GET',})
               .then(response => {
