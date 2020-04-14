@@ -25,8 +25,8 @@
 function checkLogin() {
   let log = document.getElementById('login').value
   let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/checkLogin?login=' + log// serv
-  //let str = 'http://localhost:3000/get/checkLogin?login=' + log  //lockalhost
-  fetch(str, {
+  //let strCheckLog = 'http://localhost:3000/get/checkLogin?login=' + log  //lockalhost
+  fetch(strCheckLog, {
     method: 'GET',
   })
     .then(response => {
