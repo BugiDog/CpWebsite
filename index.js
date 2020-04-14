@@ -1,8 +1,8 @@
 function login() {
   let pass = document.getElementById('password').value
   let log = document.getElementById('login').value
- //let strCheckLog ='https://difficult-aquatic-culotte.glitch.me/get/login?login=' + log+ '&password=' + pass// serv
-  let str = 'http://localhost:3000/get/login?login=' + log + '&password=' + pass//lockalhost
+ let str ='https://difficult-aquatic-culotte.glitch.me/get/login?login=' + log+ '&password=' + pass// serv
+  //let str = 'http://localhost:3000/get/login?login=' + log + '&password=' + pass//lockalhost
   fetch(str, {
     method: 'GET',
   })

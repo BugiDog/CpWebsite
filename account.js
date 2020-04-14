@@ -3,7 +3,8 @@ function foo(){
     score.splice(0, 1);
     let log = score[0];
     console.log(log);
-    let str = 'http://localhost:3000/get/account?login=' + log
+    let str ='https://difficult-aquatic-culotte.glitch.me/get/account?login=' + log  // server
+   // let str = 'http://localhost:3000/get/account?login=' + log   //lockalhost
   
     fetch(str, {
       method: 'GET',
