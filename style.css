@@ -2,6 +2,62 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.user_info {
+    width: 200px;
+    height: 500px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    border: 5px ridge black; /* Параметры границы */
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.user_wrapper {
+    padding: 10px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+
+}
+
+.pole_viv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.test_win {
+    width: 700px;
+    height: 300px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    border-left:20px solid white;
+    border-top: 10px solid white ;
+    background: rgb(177, 42, 42);
+}
+
+.account{
+
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
 .home_wrapper {
     width: 100vw;
     height: 100vh;
@@ -44,8 +100,9 @@
     width: 310px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
+    justify-content:space-between;
+    /* flex-direction: column; */
+} 
 
 .button {
     width: 200px;
@@ -57,6 +114,10 @@
     cursor: pointer;
     color: gray;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 .psih_password {
 
@@ -66,3 +127,6 @@
 .button:hover {
     opacity: 0.8;   
 } 
+.button_inviz{
+    display:none;
+}

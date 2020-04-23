@@ -1,8 +1,12 @@
+let plase = false   // true - lockalhost    false - server
+let url = plase ? 'http://localhost:3000' : 'https://difficult-aquatic-culotte.glitch.me'
+
+
 function login() {
   let pass = document.getElementById('password').value
   let log = document.getElementById('login').value
- let str ='https://difficult-aquatic-culotte.glitch.me/get/login?login=' + log+ '&password=' + pass// serv
-  //let str = 'http://localhost:3000/get/login?login=' + log + '&password=' + pass//lockalhost
+  let str = url +'/get/login?login=' + log + '&password=' + pass
+  
   fetch(str, {
     method: 'GET',
   })
@@ -27,17 +31,9 @@ function login() {
   
 }
 
-function registration() {
-
-  location.href = 'registration.html'
-}
 
 function pass_check_viz() {
   let checkbox = document.getElementById('pass_check_viz');
   let pass = document.getElementById('password')
   checkbox.checked ? pass.type = "text" : pass.type = "password"
-
-}
-function pow1(){
-  location.href = 'addUser.html'
 }

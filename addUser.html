@@ -5,19 +5,25 @@
     <link rel="stylesheet" href="style.css" />
     <title></title>
   </head>
-  <body>
+  <body onload= foo()>
     <div class="pacient_wrapper">
-      <div id='123'></div>
-      <div class="pacient_block">
-        Введите логин: <input type="text" id="login" onchange=checkLogin() />
+      <div class="pacient_block"  id="pole">
+
+
+
+        <!-- Введите название теста: <input type="text" id="login" value="Личностный опросник Айзенка EPQ" /> -->
       </div>
       <div class="pacient_block">
-        <output name="result">0</output>
+        Введите вопрос: <input type="text" id="addQuestion" value="" />
       </div>
-      <div class="pacient_block">
-        Введите фамилию:<input type="text" id="surname" />
-      </div>
-      <button class="button" onclick="pow1()">Добавить пациента</button>
+      <div class="pacient_block"  id="test">  </div>
+      
+      <button class="button" onclick="pow1()" id="viz_but1">Начать тест</button>
+      <button class="button button_inviz" onclick="pow4()" id="viz_but4">Показать результат</button>
+      <button class="button button_inviz" onclick="pow2()"  id="viz_but2">да</button>
+      <button class="button button_inviz" onclick="pow3()"   id="viz_but3">нет</button>
+      <button class="button " onclick="pow5()"   id="viz_but3">Доб вопр</button>
+     
     </div>
     <script src="addUser.js"></script>
   </body>
