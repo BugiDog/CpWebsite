@@ -1,9 +1,8 @@
 let plase = true   // true - lockalhost    false - server
 let url = plase ? 'http://localhost:3000' : 'https://difficult-aquatic-culotte.glitch.me'
 let testName = "Методика Шульте-Горбова  «КРАСНО-ЧЕРНАЯ ТАБЛИЦА» "
-let log
-let outputTest=document.getElementById('question')
-
+let log, rezTable1, rezTable2
+let idArr = generateArrayRandomNumber(1, 49)
 
 function foo() {
 
@@ -16,91 +15,57 @@ function foo() {
 
 function startTest() {
   document.getElementById('test_info').style.display = "none"
-  document.getElementById('test_question').style.display = "inline"
+  document.getElementById('test_table1').style.display = "block"
+  let redArr = generateArrayRandomNumber(1, 24), blackArr = generateArrayRandomNumber(1, 25)
+  let redIndex = 0, blackIndex = 0
+  console.log("redArr = " + redArr)
+  console.log("blackArr = " + blackArr)
+  console.log("idArr = " + idArr)
+  let change = 1
+  for (let i = 0; i < 49; i++) {
+
+    let butId = 'button' + idArr[i]
+
+    if (i%2!=0) {   //1-black  2-red
+      let but = document.getElementById(butId)
+      but.className = "red_btn"
+      but.innerText = redArr[redIndex]
+      redIndex++
+    } else {
+      let but = document.getElementById(butId)
+      but.className = "black_btn"
+      but.innerText = blackArr[blackIndex]
+      blackIndex++
+    }
+
+  }
+
+
+}
+function generateArrayRandomNumber(min, max) {
+  var totalNumbers = max - min + 1,
+    arrayTotalNumbers = [],
+    arrayRandomNumbers = [],
+    tempRandomNumber;
+  while (totalNumbers--) {
+    arrayTotalNumbers.push(totalNumbers + min);
+  }
+  while (arrayTotalNumbers.length) {
+    tempRandomNumber = Math.round(Math.random() * (arrayTotalNumbers.length - 1));
+    arrayRandomNumbers.push(arrayTotalNumbers[tempRandomNumber]);
+    arrayTotalNumbers.splice(tempRandomNumber, 1);
+  }
+  return arrayRandomNumbers;
+
+}
+
+
+
+
+
+function Table1(btn) {
   
+console.log(btn.innerText, document.getElementById(btn.id).data-background  )
+
 
 }
-
-
-function yes() {
-  rez += '1'
-  if (i < resp.questions.length - 1) {
-    i++
-    console.log(i)
-    console.log(rez)
-    outputTest.innerHTML = resp.questions[i]
-  } else {
-    document.getElementById('butYes').style.display = "none"
-    document.getElementById('butNo').style.display = "none"
-    document.getElementById('vivodRez').style.display = "inline"
-  }
-}
-
-
-function no() {
-  rez += '0'
-  if (i < resp.questions.length - 1) {
-    i++
-    console.log(i)
-    console.log(rez)
-    outputTest.innerHTML = resp.questions[i]
-  } else {
-    document.getElementById('butYes').style.display = "none"
-    document.getElementById('butNo').style.display = "none"
-
-    document.getElementById('vivodRez').style.display = "inline"
-  }
-
-}
-
-function vivodRez() {
-  let str = url + '/add/testrez?login=' + log + '&testname=' + testName + '&rezult=' + rez
-  fetch(str, {
-    method: 'GET',
-  })
-  document.getElementById('test_question').style.display = "none"
-  document.getElementById('test_rez').style.display = "inline"
-
-  let a = 0
-
-  for (let j = 0; j < resp.key[0].yes.length; j++) {
-    if (rez[parseInt(resp.key[0].yes[j])] === '1') a++
-  }
-  for (let j = 0; j < resp.key[0].no.length; j++) {
-    if (rez[parseInt(resp.key[0].no[j])] === '0') a++
-  }
-  document.getElementById('poleExtra-Intro').innerHTML = resp.key[0].scalename + a
-  a = 0
-
-
-
-  for (let j = 0; j < resp.key[1].yes.length; j++) {
-    if (rez[parseInt(resp.key[1].yes[j])] === '1') a++
-  }
-  document.getElementById('poleNeuro').innerHTML = resp.key[1].scalename + a
-  a = 0
-
-
-  for (let j = 0; j < resp.key[2].yes.length; j++) {
-    if (rez[parseInt(resp.key[2].yes[j])] === '1') a++
-  }
-  for (let j = 0; j < resp.key[2].no.length; j++) {
-    if (rez[parseInt(resp.key[2].no[j])] === '0') a++
-  }
-  document.getElementById('polePsycho').innerHTML = resp.key[2].scalename + a
-  a = 0
-
-
-  for (let j = 0; j < resp.key[3].yes.length; j++) {
-    if (rez[parseInt(resp.key[3].yes[j])] === '1') a++
-  }
-  for (let j = 0; j < resp.key[3].no.length; j++) {
-    if (rez[parseInt(resp.key[3].no[j])] === '0') a++
-  }
-  document.getElementById('poleLies').innerHTML = resp.key[3].scalename + a
-  a = 0
-
-  i = 0
-
-
-}  

@@ -1,5 +1,3 @@
-
-
 let plase = true   // true - lockalhost    false - server
 let url = plase ? 'http://localhost:3000' : 'https://difficult-aquatic-culotte.glitch.me'
 let testName = "Личностный опросник Айзенка EPQ"
