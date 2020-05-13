@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="TestStyle.css" />
+    <title>Document</title>
+  </head>
+  <body  onload= foo()>
+    <div class="test_win" id="test_info">
+      Личностный опросник Айзенка EPQ В 1969 году Ганс и Сибилла Айзенк
+      публикуют новый личностный опросник — опросник Айзенка EPQ (Eysenck
+      Personality Questionnaire или EPQ), который состоит из 101 вопроса.
+      Опросник измеряет такие психические свойства, как
+      экстраверсия-интроверсия, нейропсихическая лабильность и психотизм.
+      Вторично можно вывести наличие дальнейших черт личности таких, как
+      эмоционально-волевая стабильность и отнесение темпераментов к классическим
+      типам: холерик, сангвиник, флегматик, меланхолик. Личностный опросник
+      показывает связь между этими четырьмя типами темпераментов и результатами
+      факторно-аналитического описания личности. Личностный опросник Айзенка
+      EPQ, так же как и личностный опросник Айзенка EPI, содержит шкалу лжи.
+      Инструкция к тесту: Вам предлагается ответить на 101 вопрос. Отвечайте
+      быстро и точно. Помните, что нет правильных или неправильных вариантов
+      ответов, есть типичные ситуации и ваши реакции на них. Если вы согласны с
+      утверждением, поставьте рядом с его номером знак + (да), если нет,
+      поставьте рядом с его номером знак — (нет).
+
+      <button class="button" onclick=" startTest()" id="butStartTest">
+        Начать тест
+      </button>
+    </div>
+    <div class="test_win inviz" id="test_question">
+      <div id="question"> </div>
+
+      <button class="button " onclick=" yes()" id="butYes">
+        Да
+      </button>
+      <button class="button " onclick=" no()" id="butNo">
+        Нет
+      </button>
+      <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
+        Показать резудьтат
+      </button>
+    </div>
+    <div class="test_win inviz" id="test_rez">
+      <div id="vivod_rez"> 
+        <div id="poleExtra-Intro">      </div>
+        <div id="poleNeuro">      </div>
+        <div id="polePsycho">      </div>
+        <div id="poleLies">      </div>
+
+      </div>
+
+    </div>
+
+    <script src="aizeck.js"></script>
+  </body>
+</html>

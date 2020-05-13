@@ -1,4 +1,4 @@
-let plase = false   // true - lockalhost    false - server
+let plase = true   // true - lockalhost    false - server
 let url = plase ? 'http://localhost:3000' : 'https://difficult-aquatic-culotte.glitch.me'
 let resp
 let i = 0
@@ -18,13 +18,12 @@ function pow1() {
     .then(response => {
       response.json()
         .then(data => {
-          document.getElementById('viz_but1').style.display = "none"
-          document.getElementById('viz_but2').style.display = "inline"
-          document.getElementById('viz_but3').style.display = "inline"
+          document.getElementById('pole').innerHTML=data.HTML_Form
+          viv = document.getElementById('test')
           resp = data
           viv.innerHTML = resp.questions[i]
-          console.log(i)
-          console.log(resp.questions.length)
+          // console.log(i)
+          // console.log(resp.questions.length)
         })
     })
 

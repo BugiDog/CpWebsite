@@ -1,0 +1,32 @@
+.red_btn{
+    color: white;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border: 1px ;
+}
+.black_btn{
+    color: white;
+    width: 50px;
+    height: 50px;
+    background: black;
+    border: 1px;
+}
+
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: inline-flex;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.inviz{
+    display:none;
+}
