@@ -6,110 +6,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body >
+  <body  onload= foo()>
     <div class="test_win" id="test_info">
-      Методика Шульте-Горбова  «КРАСНО-ЧЕРНАЯ ТАБЛИЦА» 
- 
-      Исследование проводится с помощью специальных бланков, на которых 25 черных и 24 красных числа. Испытуемый должен вначале отыскать черные числа в порядке возрастания, затем красные числа в убывающем порядке. 
-      Третье задание заключается в попеременном поиске черных чисел в возрастающем и красных чисел в убывающем порядке. Основной показатель – время выполнения. 
-      Первые два задания выполняются с использованием одного бланка, третье задание – на другом бланке. 
-      Первая инструкция: «На Вашем бланке 25 черных и 24 красных чисел. Вы должны отыскать черные числа в возрастающей последовательности (от 1 до 25), а затем красные числа в убывающей последовательности (от 24 до 1). Каждый раз, находя необходимое число, запишите букву, соответствующую этому числу». Время выполнения задания фиксируется. 
-      Вторая инструкция: «Возьмите второй бланк. Теперь Вы должны отыскивать черные числа в возрастающем порядке, а красные числа в убывающем порядке, одновременно, попеременно. Например: черная цифра 1, красная цифра 24, черная цифра 2, красная цифра 23 и так далее. 
-      Буквы, соответствующие красным цифрам записываются в одном ряду (сверху), а соответствующие черным – в другом (снизу), таким образом, получается два ряда букв».  
-      
-
+      Методика Шульте-Горбова «КРАСНО-ЧЕРНАЯ ТАБЛИЦА» Исследование проводится с
+      помощью специальных бланков, на которых 25 черных и 24 красных числа.
+      Испытуемый должен вначале отыскать черные числа в порядке возрастания,
+      затем красные числа в убывающем порядке. Третье задание заключается в
+      попеременном поиске черных чисел в возрастающем и красных чисел в
+      убывающем порядке. Основной показатель – время выполнения. Первые два
+      задания выполняются с использованием одного бланка, третье задание – на
+      другом бланке.
       <button class="button" onclick=" startTest()" id="butStartTest">
         Начать тест
       </button>
+    </div>
+
+    <div class="test_win inviz" id="test_table1">
+      Первая инструкция: «На Вашем бланке 25 черных и 24 красных чисел. Вы
+      должны отыскать черные числа в возрастающей последовательности (от 1 до
+      25), а затем красные числа в убывающей последовательности (от 24 до 1).
+      Каждый раз, находя необходимое число, запишите букву, соответствующую
+      этому числу». Время выполнения задания фиксируется.
+      <div>
+        <div id="taimer"></div>
+        Количество ошибок:
+        <div id="mistake"></div>
+        <div id="message"></div>
+        <button class="red_btn" onclick="stopTable1(this)">24</button>
       </div>
 
-      <div class="test_win inviz " id="test_table1">
-        <div class="column" id="teble1"> 
-          <div class="line" id="string1"> 
-            <button class="but" id="button1" onclick="Table1(this)"></button>
-            <button class="but" id="button2" onclick="Table1(this)"></button>
-            <button class="but" id="button3" onclick="Table1(this)"></button>
-            <button class="but" id="button4" onclick="Table1(this)"></button>
-            <button class="but" id="button5" onclick="Table1(this)"></button>
-            <button class="but" id="button6" onclick="Table1(this)"></button>
-            <button class="but" id="button7" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string2">
-            <button class="but" id="button8" onclick="Table1(this)"></button>
-            <button class="but" id="button9" onclick="Table1(this)"></button>
-            <button class="but" id="button10" onclick="Table1(this)"></button>
-            <button class="but" id="button11" onclick="Table1(this)"></button>
-            <button class="but" id="button12" onclick="Table1(this)"></button>
-            <button class="but" id="button14" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string3">
-            <button class="but" id="button15" onclick="Table1(this)"></button>
-            <button class="but" id="button16" onclick="Table1(this)"></button>
-            <button class="but" id="button17" onclick="Table1(this)"></button>
-            <button class="but" id="button18" onclick="Table1(this)"></button>
-            <button class="but" id="button19" onclick="Table1(this)"></button>
-            <button class="but" id="button20" onclick="Table1(this)"></button>
-            <button class="but" id="button21" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string4">
-            <button class="but" id="button22" onclick="Table1(this)"></button>
-            <button class="but" id="button23" onclick="Table1(this)"></button>
-            <button class="but" id="button24" onclick="Table1(this)"></button>
-            <button class="but" id="button25" onclick="Table1(this)"></button>
-            <button class="but" id="button26" onclick="Table1(this)"></button>
-            <button class="but" id="button27" onclick="Table1(this)"></button>
-            <button class="but" id="button28" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string5">
-            <button class="but" id="button29" onclick="Table1(this)"></button>
-            <button class="but" id="button30" onclick="Table1(this)"></button>
-            <button class="but" id="button31" onclick="Table1(this)"></button>
-            <button class="but" id="button32" onclick="Table1(this)"></button>
-            <button class="but" id="button33" onclick="Table1(this)"></button>
-            <button class="but" id="button34" onclick="Table1(this)"></button>
-            <button class="but" id="button35" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string6">
-            <button class="but" id="button36" onclick="Table1(this)"></button>
-            <button class="but" id="button37" onclick="Table1(this)"></button>
-            <button class="but" id="button38" onclick="Table1(this)"></button>
-            <button class="but" id="button39" onclick="Table1(this)"></button>
-            <button class="but" id="button40" onclick="Table1(this)"></button>
-            <button class="but" id="button41" onclick="Table1(this)"></button>
-            <button class="but" id="button42" onclick="Table1(this)"></button>
-          </div>
-          <div class="line"  id="string7">
-            <button class="but" id="button43" onclick="Table1(this)"></button>
-            <button class="but" id="button44" onclick="Table1(this)"></button>
-            <button class="but" id="button45" onclick="Table1(this)"></button>
-            <button class="but" id="button46" onclick="Table1(this)"></button>
-            <button class="but" id="button47" onclick="Table1(this)"></button>
-            <button class="but" id="button48" onclick="Table1(this)"></button>
-            <button class="but" id="button49" onclick="Table1(this)"></button>
-          </div>
+      <div class="column" id="teble1">
+        <div class="line" id="string1">
+          <button class="but" id="button1" onclick="Table1(this)"></button>
+          <button class="but" id="button2" onclick="Table1(this)"></button>
+          <button class="but" id="button3" onclick="Table1(this)"></button>
+          <button class="but" id="button4" onclick="Table1(this)"></button>
+          <button class="but" id="button5" onclick="Table1(this)"></button>
+          <button class="but" id="button6" onclick="Table1(this)"></button>
+          <button class="but" id="button7" onclick="Table1(this)"></button>
         </div>
-
-        <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
-          Показать резудьтат
-        </button>
+        <div class="line" id="string2">
+          <button class="but" id="button8" onclick="Table1(this)"></button>
+          <button class="but" id="button9" onclick="Table1(this)"></button>
+          <button class="but" id="button10" onclick="Table1(this)"></button>
+          <button class="but" id="button11" onclick="Table1(this)"></button>
+          <button class="but" id="button12" onclick="Table1(this)"></button>
+          <button class="but" id="button13" onclick="Table1(this)"></button>
+          <button class="but" id="button14" onclick="Table1(this)"></button>
+        </div>
+        <div class="line" id="string3">
+          <button class="but" id="button15" onclick="Table1(this)"></button>
+          <button class="but" id="button16" onclick="Table1(this)"></button>
+          <button class="but" id="button17" onclick="Table1(this)"></button>
+          <button class="but" id="button18" onclick="Table1(this)"></button>
+          <button class="but" id="button19" onclick="Table1(this)"></button>
+          <button class="but" id="button20" onclick="Table1(this)"></button>
+          <button class="but" id="button21" onclick="Table1(this)"></button>
+        </div>
+        <div class="line" id="string4">
+          <button class="but" id="button22" onclick="Table1(this)"></button>
+          <button class="but" id="button23" onclick="Table1(this)"></button>
+          <button class="but" id="button24" onclick="Table1(this)"></button>
+          <button class="but" id="button25" onclick="Table1(this)"></button>
+          <button class="but" id="button26" onclick="Table1(this)"></button>
+          <button class="but" id="button27" onclick="Table1(this)"></button>
+          <button class="but" id="button28" onclick="Table1(this)"></button>
+        </div>
+        <div class="line" id="string5">
+          <button class="but" id="button29" onclick="Table1(this)"></button>
+          <button class="but" id="button30" onclick="Table1(this)"></button>
+          <button class="but" id="button31" onclick="Table1(this)"></button>
+          <button class="but" id="button32" onclick="Table1(this)"></button>
+          <button class="but" id="button33" onclick="Table1(this)"></button>
+          <button class="but" id="button34" onclick="Table1(this)"></button>
+          <button class="but" id="button35" onclick="Table1(this)"></button>
+        </div>
+        <div class="line" id="string6">
+          <button class="but" id="button36" onclick="Table1(this)"></button>
+          <button class="but" id="button37" onclick="Table1(this)"></button>
+          <button class="but" id="button38" onclick="Table1(this)"></button>
+          <button class="but" id="button39" onclick="Table1(this)"></button>
+          <button class="but" id="button40" onclick="Table1(this)"></button>
+          <button class="but" id="button41" onclick="Table1(this)"></button>
+          <button class="but" id="button42" onclick="Table1(this)"></button>
+        </div>
+        <div class="line" id="string7">
+          <button class="but" id="button43" onclick="Table1(this)"></button>
+          <button class="but" id="button44" onclick="Table1(this)"></button>
+          <button class="but" id="button45" onclick="Table1(this)"></button>
+          <button class="but" id="button46" onclick="Table1(this)"></button>
+          <button class="but" id="button47" onclick="Table1(this)"></button>
+          <button class="but" id="button48" onclick="Table1(this)"></button>
+          <button class="but" id="button49" onclick="Table1(this)"></button>
+        </div>
       </div>
 
-      <div class="test_win inviz" id="test_table2">
+      <button class="button inviz" onclick=" nextTable()" id="nextTable">
+        Следующий этап
+      </button>
+    </div>
 
-        <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
-          Показать резудьтат
-        </button>
+    <div class="test_win inviz" id="test_table2">
+      Вторая инструкция: «Возьмите второй бланк. Теперь Вы должны отыскивать
+      черные числа в возрастающем порядке, а красные числа в убывающем порядке,
+      одновременно, попеременно. Например: черная цифра 1, красная цифра 24,
+      черная цифра 2, красная цифра 23 и так далее.
+
+      <div>
+        <div id="taimer2"></div>
+        Количество ошибок:
+        <div id="mistake2"></div>
+        <div id="message2"></div>
+        <button class="black_btn" onclick="stopTable2(this)" >25</button>
       </div>
 
-      <div class="test_win inviz"  id="vivod_rez"> 
-        <div id="poleExtra-Intro">      </div>
-        <div id="poleNeuro">      </div>
-        <div id="polePsycho">      </div>
-        <div id="poleLies">      </div>
 
+      <div class="column" id="teble2">
+        <div class="line" id="string1">
+          <button class="but" id="buton1" onclick="Table2(this)"></button>
+          <button class="but" id="buton2" onclick="Table2(this)"></button>
+          <button class="but" id="buton3" onclick="Table2(this)"></button>
+          <button class="but" id="buton4" onclick="Table2(this)"></button>
+          <button class="but" id="buton5" onclick="Table2(this)"></button>
+          <button class="but" id="buton6" onclick="Table2(this)"></button>
+          <button class="but" id="buton7" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string2">
+          <button class="but" id="buton8" onclick="Table2(this)"></button>
+          <button class="but" id="buton9" onclick="Table2(this)"></button>
+          <button class="but" id="buton10" onclick="Table2(this)"></button>
+          <button class="but" id="buton11" onclick="Table2(this)"></button>
+          <button class="but" id="buton12" onclick="Table2(this)"></button>
+          <button class="but" id="buton13" onclick="Table2(this)"></button>
+          <button class="but" id="buton14" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string3">
+          <button class="but" id="buton15" onclick="Table2(this)"></button>
+          <button class="but" id="buton16" onclick="Table2(this)"></button>
+          <button class="but" id="buton17" onclick="Table2(this)"></button>
+          <button class="but" id="buton18" onclick="Table2(this)"></button>
+          <button class="but" id="buton19" onclick="Table2(this)"></button>
+          <button class="but" id="buton20" onclick="Table2(this)"></button>
+          <button class="but" id="buton21" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string4">
+          <button class="but" id="buton22" onclick="Table2(this)"></button>
+          <button class="but" id="buton23" onclick="Table2(this)"></button>
+          <button class="but" id="buton24" onclick="Table2(this)"></button>
+          <button class="but" id="buton25" onclick="Table2(this)"></button>
+          <button class="but" id="buton26" onclick="Table2(this)"></button>
+          <button class="but" id="buton27" onclick="Table2(this)"></button>
+          <button class="but" id="buton28" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string5">
+          <button class="but" id="buton29" onclick="Table2(this)"></button>
+          <button class="but" id="buton30" onclick="Table2(this)"></button>
+          <button class="but" id="buton31" onclick="Table2(this)"></button>
+          <button class="but" id="buton32" onclick="Table2(this)"></button>
+          <button class="but" id="buton33" onclick="Table2(this)"></button>
+          <button class="but" id="buton34" onclick="Table2(this)"></button>
+          <button class="but" id="buton35" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string6">
+          <button class="but" id="buton36" onclick="Table2(this)"></button>
+          <button class="but" id="buton37" onclick="Table2(this)"></button>
+          <button class="but" id="buton38" onclick="Table2(this)"></button>
+          <button class="but" id="buton39" onclick="Table2(this)"></button>
+          <button class="but" id="buton40" onclick="Table2(this)"></button>
+          <button class="but" id="buton41" onclick="Table2(this)"></button>
+          <button class="but" id="buton42" onclick="Table2(this)"></button>
+        </div>
+        <div class="line" id="string7">
+          <button class="but" id="buton43" onclick="Table2(this)"></button>
+          <button class="but" id="buton44" onclick="Table2(this)"></button>
+          <button class="but" id="buton45" onclick="Table2(this)"></button>
+          <button class="but" id="buton46" onclick="Table2(this)"></button>
+          <button class="but" id="buton47" onclick="Table2(this)"></button>
+          <button class="but" id="buton48" onclick="Table2(this)"></button>
+          <button class="but" id="buton49" onclick="Table2(this)"></button>
+        </div>
       </div>
 
+      <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
+        Показать резудьтат
+      </button>
+    </div>
 
+    <div class="test_win inviz" id="vivod_rez">
+      Время выполнения первого заданимя:
+      <div id="time1"></div>
+      Количество ошибок в певом задании:
+      <div id="rezMisTable1"></div>
+      Время выполнения второго заданимя:
+      <div id="time2"></div>
+      Количество ошибок во втором задании:
+      <div id="rezMisTable2"></div>
+      Время переключения внимания:
+      <div id="timeSwitch"></div>
+    </div>
 
     <script src="red_black_table.js"></script>
   </body>
