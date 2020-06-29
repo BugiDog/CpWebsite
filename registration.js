@@ -21,7 +21,7 @@ function checkLogin() {
     })
 
 }
-
+ 
 
 
 function pass_check_viz() {
