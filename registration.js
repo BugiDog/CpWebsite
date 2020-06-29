@@ -48,7 +48,7 @@ function add() {
     let surname = document.getElementById('surname').value
     let hooPsih = document.getElementById('psih')
     let hoo = "Пациент"
-    if (hooPsih.checked) hoo = "Психиатр"
+    
     let strCheckLog=url +'/get/checkLogin?login='+ log
 
     fetch(strCheckLog, {
