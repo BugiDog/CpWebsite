@@ -1,3 +1,26 @@
+* {box-sizing: border-box;}
+body {
+  background: #e6f4fd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ui-form.button {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: #4a90e2;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+    margin: 3px;
+    cursor:pointer
+  }
+
+.aizeckButton{
+    width: 150px;
+    height: 50px;
+}
+
 .red_btn{
     color: white;
     width: 50px;
@@ -30,4 +53,10 @@
 }
 .inviz{
     display:none;
+}
+
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

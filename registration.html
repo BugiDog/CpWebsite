@@ -2,31 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleWelcome.css" />
     <title></title>
   </head>
   <body>
-    <div class="psih_wrapper">
-      <div class="pacient_block">
-        ???Кто вы??? Пациент:<input name="hoo" type="radio" id="paz" checked/> Психолог:<input name="hoo" type="radio" id="psih" />
-      </div>
+    <div class="ui-form">
+      <h3>Регистрация на сайте</h3>
 
-      <div class="pacient_block">
-        Придумайте логин: <input type="text" id="login"  onchange=checkLogin() /> <div id="checkLog">  </div>
-      </div>   <div id="checkLog">  </div>
-      <div class="pacient_block">
-        Введите имя: <input type="text" id="name" />
+      <br/>
+      <div class="form-row">
+        <input type="text" id="login" onchange=checkLogin() required autocomplete="off"><label >Придумайте логин</label>
+        <div id="checkLog">  </div>
       </div>
-      <div class="pacient_block">
-        Введите фамилию:<input type="text" id="surname" />
+        
+      <div class="form-row">
+        <input type="text" id="name" required autocomplete="off"><label >Введите имя</label>
       </div>
-      <div class="pacient_block">
-        Придумайте пароль: <input type="password" id="password1" />
+      <div class="form-row">
+        <input type="text" id="surname" required autocomplete="off"><label >Введите фамилию</label>
       </div>
-      <div class="pacient_block">
-        Повторите пароль: <input type="password" id="password2" />
+      <div class="form-row">
+        <input type="password" id="password1" required autocomplete="off"><label >Придумайте пароль</label>
       </div>
-      <div class="pacient_block">
+      <div class="form-row">
+        <input type="password" id="password2" required autocomplete="off"><label >Повторите пароль</label>
+      </div>
+      <div >
         Показать пароли:<input
           type="checkbox"
           onclick="pass_check_viz()"
@@ -34,7 +35,7 @@
         />
       </div>
 
-      <button class="button" onclick="add()">Добавить</button>
+      <button class="ui-form button" onclick="add()">Зарегистрироваться</button>
     </div>
     <script src="registration.js"></script>
   </body>

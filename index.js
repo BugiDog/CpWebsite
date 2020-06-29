@@ -31,6 +31,10 @@ function login() {
   
 }
 
+function registration() {
+  window.open('registration.html',"_self");
+}
+
 
 function pass_check_viz() {
   let checkbox = document.getElementById('pass_check_viz');

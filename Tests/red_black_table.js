@@ -84,12 +84,12 @@ function generateArrayRandomNumber(min, max) {
 
 
 let colorBut, colorNeed = "black"
-let redIndex = 0, blackIndex = 0
+let redIndex = 25, blackIndex = 0
 let mistake = 0
 
 function stopTable1(but) {
   colorNeed = "red"
-  redIndex = 23
+  redIndex = 2
   Table1(but)
 }
 
@@ -109,9 +109,9 @@ function Table1(but) {
     if (colorNeed == "black" & but.innerText == blackIndex + 1) {
       blackIndex++
       if (but.innerText == 25) { colorNeed = "red" }
-    } else if (colorNeed == "red" & but.innerText == redIndex + 1) {
-      redIndex++
-      if (but.innerText == 24) {
+    } else if (colorNeed == "red" & but.innerText == redIndex -1) {
+      redIndex--
+      if (but.innerText == 1) {
         rezTable1 = Taimer("stop")
         rezMisTable1=mistake
         document.getElementById("message").innerHTML = "Время выполнения:" + Math.floor(rezTable1 / 60) + ":" + rezTable1 % 60
@@ -252,11 +252,11 @@ function vivodRez(){
 
   document.getElementById("test_table2").style.display = "none"
   document.getElementById("vivod_rez").style.display = "block"
-  document.getElementById("time1").innerHTML = rezTable1
+  document.getElementById("time1").innerHTML =  Math.floor(rezTable1 / 60) + ":" + rezTable1 % 60
   document.getElementById("rezMisTable1").innerHTML = rezMisTable1
-  document.getElementById("time2").innerHTML = rezTable2
+  document.getElementById("time2").innerHTML = Math.floor(rezTable2 / 60) + ":" + rezTable2 % 60
   document.getElementById("rezMisTable2").innerHTML = rezMisTable2
-  document.getElementById("timeSwitch").innerHTML = rezTable2-rezTable1
+  document.getElementById("timeSwitch").innerHTML = Math.floor((rezTable2-rezTable1) / 60) + ":" + (rezTable2-rezTable1) % 60
 
   
 

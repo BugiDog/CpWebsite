@@ -27,13 +27,7 @@
       25), а затем красные числа в убывающей последовательности (от 24 до 1).
       Каждый раз, находя необходимое число, запишите букву, соответствующую
       этому числу». Время выполнения задания фиксируется.
-      <div>
-        <div id="taimer"></div>
-        Количество ошибок:
-        <div id="mistake"></div>
-        <div id="message"></div>
-        <button class="red_btn" onclick="stopTable1(this)">24</button>
-      </div>
+      
 
       <div class="column" id="teble1">
         <div class="line" id="string1">
@@ -100,8 +94,16 @@
           <button class="but" id="button49" onclick="Table1(this)"></button>
         </div>
       </div>
+      <div class="column">
+        Время:
+        <div id="taimer"></div>
+        Количество ошибок:
+        <div id="mistake"></div>
+        <div id="message"></div>
+        <!-- <button class="red_btn" onclick="stopTable1(this)">1</button> -->
+      </div>
 
-      <button class="button inviz" onclick=" nextTable()" id="nextTable">
+      <button class="ui-form button inviz" onclick=" nextTable()" id="nextTable">
         Следующий этап
       </button>
     </div>
@@ -112,13 +114,7 @@
       одновременно, попеременно. Например: черная цифра 1, красная цифра 24,
       черная цифра 2, красная цифра 23 и так далее.
 
-      <div>
-        <div id="taimer2"></div>
-        Количество ошибок:
-        <div id="mistake2"></div>
-        <div id="message2"></div>
-        <button class="black_btn" onclick="stopTable2(this)" >25</button>
-      </div>
+
 
 
       <div class="column" id="teble2">
@@ -186,18 +182,25 @@
           <button class="but" id="buton49" onclick="Table2(this)"></button>
         </div>
       </div>
-
-      <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
-        Показать резудьтат
+      <div class="column">
+        Время:
+        <div id="taimer2"></div>
+        Количество ошибок:
+        <div id="mistake2"></div>
+        <div id="message2"></div>
+        <!-- <button class="black_btn" onclick="stopTable2(this)" >25</button> -->
+      </div>
+      <button class="ui-form button inviz" onclick=" vivodRez()" id="vivodRez">
+        Показать результат
       </button>
     </div>
 
     <div class="test_win inviz" id="vivod_rez">
-      Время выполнения первого заданимя:
+      Время выполнения первого задания:
       <div id="time1"></div>
       Количество ошибок в певом задании:
       <div id="rezMisTable1"></div>
-      Время выполнения второго заданимя:
+      Время выполнения второго задания:
       <div id="time2"></div>
       Количество ошибок во втором задании:
       <div id="rezMisTable2"></div>
