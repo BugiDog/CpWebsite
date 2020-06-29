@@ -28,7 +28,7 @@ function login() {
       })
     })
 
-  
+   
 }
 
 function registration() {
