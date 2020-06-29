@@ -2,21 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleAccount.css" />
     <title></title>
   </head>
   <body onload="foo()">
+    <div class="jumbotron">
+      <label class="jumbotronText"> Психологические тесты </label>  
+    </div>
     <div class="account">
+
       <div class="user_info">
         <div id="blockHoo"></div>
         <div class="user_wrapper" id="blockLogin"></div>
         <div class="user_wrapper" id="blockName"></div>
         <div class="user_wrapper" id="blockSurname"></div>
+        
+
       </div>
+
         <div class="test_win" id="poleTestList">
-          Выберите тест:
-          <button class="button" onclick="openTestAizeck()">Личностный опросник Айзенка EPQ</button>
-          <button class="button" onclick="openTestRedBlack()">
+          
+          <button class="ui-form button " onclick="openTestAizeck()">Личностный опросник Айзенка EPQ</button>
+          <button class="ui-form button " onclick="openTestRedBlack()">
             Методика Шульте-Горбова «КРАСНО-ЧЕРНАЯ ТАБЛИЦА»
           </button>
         </div>      

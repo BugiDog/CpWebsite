@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleWelcome.css">
   </head>
   <body>
-    <div class="pacient_wrapper">
-      <div class="pacient_block">
-        Введите логин: <input type="text" id="login" />
+    <div class="ui-form">
+      <h3>Войти на сайт</h3>
+      <div class="form-row">
+        <input type="text" id="login" required autocomplete="off"><label >Login</label>
       </div>
-      <div class="pacient_block">
-        Введите пароль:<input type="password" id="password" />
+      <div class="form-row">
+        <input type="password" id="password" required autocomplete="off"><label >Пароль</label>
       </div>
-      <div class="pacient_block">
-        Показать
-        пароль:<input type="checkbox" onclick="pass_check_viz()" id="pass_check_viz" />
+      <div>
+        <label >Показать
+        пароль:</label><input type="checkbox" onclick="pass_check_viz()" id="pass_check_viz" />
       </div>
-      <button class="button " onclick="login()"> Войти </button><div id="checkLog">  </div>
-       <a class="button "  href="registration.html">Регистрация</a>
-      <a class="button " href="addUser.html">Test</a>
+      <button class="ui-form button " onclick="login()"> Войти </button><div id="checkLog">  </div>
+       <button class="ui-form button " onclick="registration()" >Регистрация</button>
+      
     </div>
    
 

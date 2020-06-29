@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body  onload= foo()>
-    <div class="test_win" id="test_info">
+    <div class="" id="test_info">
       Личностный опросник Айзенка EPQ В 1969 году Ганс и Сибилла Айзенк
       публикуют новый личностный опросник — опросник Айзенка EPQ (Eysenck
       Personality Questionnaire или EPQ), который состоит из 101 вопроса.
@@ -20,24 +20,26 @@
       EPQ, так же как и личностный опросник Айзенка EPI, содержит шкалу лжи.
       Инструкция к тесту: Вам предлагается ответить на 101 вопрос. Отвечайте
       быстро и точно. Помните, что нет правильных или неправильных вариантов
-      ответов, есть типичные ситуации и ваши реакции на них. Если вы согласны с
-      утверждением, поставьте рядом с его номером знак + (да), если нет,
-      поставьте рядом с его номером знак — (нет).
+      ответов, есть типичные ситуации и ваши реакции на них. В зовисимости от вашего мнения нажмите да или нет.
 
-      <button class="button" onclick=" startTest()" id="butStartTest">
+      <button class="ui-form button" onclick=" startTest()" id="butStartTest">
         Начать тест
       </button>
     </div>
-    <div class="test_win inviz" id="test_question">
-      <div id="question"> </div>
+    <div class="inviz test_win_question " id="test_question">
+      <div class="question" id="question" style = "font-size: 25px;"> </div>
+    <div class="line">
 
-      <button class="button " onclick=" yes()" id="butYes">
-        Да
+      <button class=" ui-form button " onclick=" yes()" id="butYes" style = "width: 150px;">
+       Да
       </button>
-      <button class="button " onclick=" no()" id="butNo">
+       <button class="ui-form button " onclick=" no()" id="butNo" style = "width: 150px;">
         Нет
       </button>
-      <button class="button inviz" onclick=" vivodRez()" id="vivodRez">
+
+        </div>
+      
+      <button class="ui-form button inviz" onclick=" vivodRez()" id="vivodRez">
         Показать резудьтат
       </button>
     </div>
@@ -47,8 +49,8 @@
         <div id="poleNeuro">      </div>
         <div id="polePsycho">      </div>
         <div id="poleLies">      </div>
-
       </div>
+  
 
     </div>
 

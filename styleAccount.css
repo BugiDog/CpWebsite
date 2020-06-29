@@ -1,0 +1,49 @@
+* {box-sizing: border-box;}
+body {
+  background: #e6f4fd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.user_info {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    border: 1px ridge black; /* Параметры границы */
+    background:#83aee0; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+.account{
+    display: flex;
+}
+.ui-form.button {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: #4a90e2;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+    margin: 3px;
+    cursor:pointer
+  }
+  .jumbotron{
+      background-image: url(./img/pngtree-blue-atmospheric-background-image_50584.jpg);
+      background-size: cover;
+      background-position: top center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 250px;
+    text-align: center;
+    clear: both;
+  }
+
+  .jumbotronText{
+      font-size: 50px;
+      color: cornsilk;
+
+  }

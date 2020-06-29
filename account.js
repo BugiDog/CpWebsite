@@ -25,6 +25,8 @@ function foo() {
           blockName.innerHTML = 'Имя: ' + data.name
           blockSurname.innerHTML = 'Фамилия: ' + data.surname
 
+          console.log(data.history.length)
+
         })
 
     })
